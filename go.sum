@@ -136,6 +136,8 @@ github.com/libp2p/go-libp2p-core v0.4.0 h1:LjZJP/Yy4q8kc724izkYQ9v6YkAmkKCOaE5jL
 github.com/libp2p/go-libp2p-core v0.4.0/go.mod h1:49XGI+kc38oGVwqSBhDEwytaAxgZasHhFfQKibzTls0=
 github.com/libp2p/go-libp2p-core v0.5.0 h1:FBQ1fpq2Fo/ClyjojVJ5AKXlKhvNc/B6U0O+7AN1ffE=
 github.com/libp2p/go-libp2p-core v0.5.0/go.mod h1:49XGI+kc38oGVwqSBhDEwytaAxgZasHhFfQKibzTls0=
+github.com/libp2p/go-libp2p-core v0.5.2-0.20200407111719-49c747cbf18c h1:mMOcmG1ruBINI7IgYGaJIFTSX1f223kwdPh9oseSUEo=
+github.com/libp2p/go-libp2p-core v0.5.2-0.20200407111719-49c747cbf18c/go.mod h1:uN7L2D4EvPCvzSH5SrhR72UWbnSGpt5/a35Sm4upn4Y=
 github.com/libp2p/go-libp2p-loggables v0.1.0 h1:h3w8QFfCt2UJl/0/NW4K829HX/0S4KD31PQ7m8UXXO8=
 github.com/libp2p/go-libp2p-loggables v0.1.0/go.mod h1:EyumB2Y6PrYjr55Q3/tiJ/o3xoDasoRYM7nOzEpoa90=
 github.com/libp2p/go-libp2p-mplex v0.2.0/go.mod h1:Ejl9IyjvXJ0T9iqUTE1jpYATQ9NM3g+OtR+EMMODbKo=
@@ -159,6 +161,8 @@ github.com/libp2p/go-libp2p-transport-upgrader v0.1.1 h1:PZMS9lhjK9VytzMCW3tWHAX
 github.com/libp2p/go-libp2p-transport-upgrader v0.1.1/go.mod h1:IEtA6or8JUbsV07qPW4r01GnTenLW4oi3lOPbUMGJJA=
 github.com/libp2p/go-libp2p-transport-upgrader v0.2.0 h1:5EhPgQhXZNyfL22ERZTUoVp9UVVbNowWNVtELQaKCHk=
 github.com/libp2p/go-libp2p-transport-upgrader v0.2.0/go.mod h1:mQcrHj4asu6ArfSoMuyojOdjx73Q47cYD7s5+gZOlns=
+github.com/libp2p/go-libp2p-transport-upgrader v0.2.1-0.20200407112611-f50127360f18 h1:ZhB4WXsNjXsMce1oR+Y5ciN+GegjHoPk9ScLpfUBk6E=
+github.com/libp2p/go-libp2p-transport-upgrader v0.2.1-0.20200407112611-f50127360f18/go.mod h1:zXQIuMuU0HeMzQbVqowpV5AxU7Xy3MlGQvMw5qGtUF4=
 github.com/libp2p/go-libp2p-yamux v0.2.2 h1:eGvbqWqWY9S5lrpe2gA0UCOLCdzCgYSAR3vo/xCsNQg=
 github.com/libp2p/go-libp2p-yamux v0.2.2/go.mod h1:lIohaR0pT6mOt0AZ0L2dFze9hds9Req3OfS+B+dv4qw=
 github.com/libp2p/go-maddr-filter v0.0.4 h1:hx8HIuuwk34KePddrp2mM5ivgPkZ09JH4AvsALRbFUs=

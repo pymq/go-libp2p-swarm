@@ -5,12 +5,12 @@ require (
 	github.com/jbenet/goprocess v0.1.4
 	github.com/libp2p/go-addr-util v0.0.1
 	github.com/libp2p/go-conn-security-multistream v0.1.0
-	github.com/libp2p/go-libp2p-core v0.5.0
+	github.com/libp2p/go-libp2p-core v0.5.2-0.20200407111719-49c747cbf18c
 	github.com/libp2p/go-libp2p-loggables v0.1.0
 	github.com/libp2p/go-libp2p-peerstore v0.2.2
 	github.com/libp2p/go-libp2p-secio v0.2.1
 	github.com/libp2p/go-libp2p-testing v0.1.1
-	github.com/libp2p/go-libp2p-transport-upgrader v0.2.0
+	github.com/libp2p/go-libp2p-transport-upgrader v0.2.1-0.20200407112611-f50127360f18
 	github.com/libp2p/go-libp2p-yamux v0.2.2
 	github.com/libp2p/go-maddr-filter v0.0.5
 	github.com/libp2p/go-stream-muxer-multistream v0.2.0
@@ -21,9 +21,5 @@ require (
 	github.com/stretchr/testify v1.4.0
 	github.com/whyrusleeping/multiaddr-filter v0.0.0-20160516205228-e903e4adabd7
 )
-
-replace github.com/libp2p/go-libp2p-core => /Users/aarshshah/go/src/github.com/libp2p/go-libp2p-core
-
-replace github.com/libp2p/go-libp2p-transport-upgrader => /Users/aarshshah/go/src/github.com/libp2p/go-libp2p-transport-upgrader
 
 go 1.12
