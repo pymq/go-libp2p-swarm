@@ -18,7 +18,12 @@ require (
 	github.com/multiformats/go-multiaddr v0.2.1
 	github.com/multiformats/go-multiaddr-fmt v0.1.0
 	github.com/multiformats/go-multiaddr-net v0.1.3
+	github.com/stretchr/testify v1.4.0
 	github.com/whyrusleeping/multiaddr-filter v0.0.0-20160516205228-e903e4adabd7
 )
+
+replace github.com/libp2p/go-libp2p-core => /Users/aarshshah/go/src/github.com/libp2p/go-libp2p-core
+
+replace github.com/libp2p/go-libp2p-transport-upgrader => /Users/aarshshah/go/src/github.com/libp2p/go-libp2p-transport-upgrader
 
 go 1.12
