@@ -2,28 +2,28 @@ package testing
 
 import (
 	"context"
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/control"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/transport"
-	ma "github.com/multiformats/go-multiaddr"
 	"testing"
 
+	"github.com/libp2p/go-libp2p-core/connmgr"
+	"github.com/libp2p/go-libp2p-core/control"
 	"github.com/libp2p/go-libp2p-core/metrics"
 	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/peerstore"
-	"github.com/libp2p/go-libp2p-testing/net"
-	"github.com/libp2p/go-tcp-transport"
+	"github.com/libp2p/go-libp2p-core/transport"
 
-	goprocess "github.com/jbenet/goprocess"
 	csms "github.com/libp2p/go-conn-security-multistream"
 	pstoremem "github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	secio "github.com/libp2p/go-libp2p-secio"
+	swarm "github.com/libp2p/go-libp2p-swarm"
+	"github.com/libp2p/go-libp2p-testing/net"
 	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
 	yamux "github.com/libp2p/go-libp2p-yamux"
 	msmux "github.com/libp2p/go-stream-muxer-multistream"
+	"github.com/libp2p/go-tcp-transport"
 
-	swarm "github.com/libp2p/go-libp2p-swarm"
+	goprocess "github.com/jbenet/goprocess"
+	ma "github.com/multiformats/go-multiaddr"
 )
 
 type config struct {
@@ -152,34 +152,18 @@ func (m *MockConnectionGater) InterceptDial(addr ma.Multiaddr) (allow bool) {
 	return m.Dial(addr)
 }
 
-// InterceptPeerDial tests whether we're permitted to dial the specified peer.
-// This is to be called by the network/swarm when dialling.
 func (m *MockConnectionGater) InterceptPeerDial(p peer.ID) (allow bool) {
 	return m.PeerDial(p)
 }
 
-// InterceptAccept tests whether an incipient inbound connection is allowed.
-// network.ConnMultiaddrs is what we pass to the upgrader.
-// This is intended to be called by the upgrader, or by the transport
-// directly (e.g. QUIC, Bluetooth), straight after it's accepted a connection
-// from its socket.
 func (m *MockConnectionGater) InterceptAccept(c network.ConnMultiaddrs) (allow bool) {
 	return m.Accept(c)
 }
 
-// InterceptSecured tests whether a given connection, now authenticated,
-// is allowed.
-// This is intended to be called by the upgrader, after it has negotiated crypto,
-// and before it negotiates the muxer, or by the directly by the transport,
-// at the exact same checkpoint.
 func (m *MockConnectionGater) InterceptSecured(d network.Direction, p peer.ID, c network.ConnMultiaddrs) (allow bool) {
 	return m.Secured(d, p, c)
 }
 
-// InterceptUpgraded tests whether a fully capable connection is allowed.
-// At this point, we have a multiplexer, so the middleware can
-// return a DisconnectReason.
-// and the swarm would use the control stream to convey it to the peer.
 func (m *MockConnectionGater) InterceptUpgraded(tc transport.CapableConn) (allow bool, reason control.DisconnectReason) {
 	return m.Upgraded(tc)
 }
